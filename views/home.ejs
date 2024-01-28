@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Url Shortner</title>
+    <link rel="stylesheet" href="/stylesheets/home.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page">
+          <nav class="navbar">
+            <a href="" class="brand"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F8%2F84%2FApple_Computer_Logo_rainbow.svg%2F1200px-Apple_Computer_Logo_rainbow.svg.png&f=1&nofb=1" alt=""></a>
+            <ul>
+            <li>
+              <a href="">Support</a>
+              </li>
+            <li>
+              <a href="">About</a>
+            </li>
+            <li>
+              <a href="/login">Account</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="left">
+            <h1>URL Shortner</h1>
+            <form action="/url" method="post">
+                <label>Enter URL</label>
+                <div class="input-field">
+                    <input type="text" name="url" placeholder="https://example.com">
+                </div>
+                <input type="submit" class="btn" value="Generate" />
+            </form>
+            <div class="table-tbn">
+                <% if (locals.urls) { %>
+                    <table>
+                        <thead>
+                            <th>S. no.</th>
+                            <th>Short_URL</th>
+                            <th>Redirect</th>
+                            <th>Clicks</th>
+                        </thead>
+                        <tbody>
+                            <% urls.forEach((url, index) => { %>
+                                <tr>
+                                    <td><%= index + 1 %></td>
+                                    <td><%= `localhost:3000/${url.shortID}` %></td>
+                                    <td><%= url.redirectUrl %></td>
+                                    <td><%= url.visited.length %></td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                <% } %>
+            </div>
+          </div>
+          <div class="right">
+            <ul>
+              <li>Instagram</li>
+              <li>-</li>
+              <li>Facebook</li>
+              <li>-</li>
+              <li>Twitter</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

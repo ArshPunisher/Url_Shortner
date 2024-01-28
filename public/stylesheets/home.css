@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #D2CAC4;
+  overflow: hidden;
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #F1F4E3;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+
+a {
+  text-decoration:none;
+  color: #CECECE;
+  text-transform:uppercase;
+  font-size: 12px;
+  font-family: 'Red Hat Mono', monospace;
+}
+
+a img {
+  height:2.3rem;
+  margin: 10px 0 0 50px;
+}
+table, th, td {
+    border: 1px solid #534935;
+}
+th, td{
+    padding: .5rem;
+}
+  
+.navbar {
+  width: 100%;
+  height:55px;
+  position: sticky;
+  background-color:white;
+}
+
+.navbar ul{
+  display: flex;
+  float: right;
+  list-style-type:none;
+  text-decoration: none;
+  margin:15px 15px;
+}
+
+.navbar ul li{
+  padding: 0 15px 0 15px;
+}
+
+.right{
+  background-color:#E38931;
+  position: absolute;
+  width:55%;
+  height: 90%;
+  left: 55%;
+  border-radius: 100% 0 0 0;
+}
+
+h1 {
+    font-family: 'Red Hat Mono', monospace;
+  color: #534935;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  transform: translate(-10%, -40%);
+  width: 350px;
+  font-size:3rem;
+}
+.input-field {
+    max-width: 380px;
+    width: 100%;
+    background-color: #d1d1d1;
+    margin: 10px 0;
+    padding: 0 0.4rem;
+    height: 55px;
+    border-radius: 5px;
+  }
+
+  .input-field input {
+    background: none;
+    outline: none;
+    background-color: #d1d1d1;
+    border: none;
+    margin-top: .2rem;
+    height: 50px;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+  
+input::placeholder {
+    color: #aaa;
+    font-weight: 500;
+}
+  
+form{
+  font-family: 'Red Hat Mono', monospace;
+  color: #534935;
+  position: absolute;
+  top: 50%;
+  font-weight: 900;
+  left: 9%;
+  transform: translate(-7%, -58%);
+ font-size: 1rem;
+}
+
+.btn {
+    width: 150px;
+    background-color: #F86F03;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 4px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+  
+.btn:hover {
+  background-color: #f98c39;
+}
+
+.table-tbn{
+    font-family: 'Red Hat Mono', monospace;
+  color: #534935;
+  position: absolute;
+  top: 70%;
+  font-weight: 900;
+  left: 9%;
+  transform: translate(-7%, -58%);
+ font-size: 1rem;
+}
+
+.right ul {
+  display: flex;
+  float: right;
+  list-style-type:none;
+  text-decoration: none;
+  margin:15px 15px;
+  top:50%;
+  left: 60%;
+  position:absolute;
+  transform:rotate(-90deg);
+}
+
+.right ul li{
+ margin: 8px;
+  color:white;
+    font-family: 'Red Hat Mono', monospace;
+  transform:uppercase;
+  font-size: 10px;
+}
